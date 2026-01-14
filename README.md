@@ -4,7 +4,9 @@ This document explains how the timesheet is set up and used in Google Sheets. It
 
 # Prepare the Sheet
 
-Open a new sheet by using the web address [sheets.new.](https://sheets.net) You can also add a new tab with Shift + F11 if working with an existing sheet.
+Open a new sheet by using the web address 
+[sheets.new.](https://sheets.new) 
+You can also add a new tab with Shift + F11 if working with an existing sheet.
 
 Note: If your web browser does not support Shift + F11, consult the Google Sheets documentation for your browser. This applies to all keyboard shortcuts listed in this document. Select all rows with Ctrl + A, then press Backspace. Clear formatting just in case with Ctrl + \\   
 Go to the View menu → Freeze > 1 row. When freezing the first row, Ensure row 1 is highlighted
