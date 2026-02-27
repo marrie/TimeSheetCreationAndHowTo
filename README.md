@@ -140,9 +140,7 @@ current calculation.
 ## Daily Total Using SUMIFS (Total (day))
 
 Daily totals are calculated using a fixed `SUMIFS` formula stored in the
-control block in column `J`.
-
-Cell `J3` contains the active work date in `YYYY/MM/DD` format. This date is
+control block in column `J`. Cell `J3` contains the active work date in `YYYY/MM/DD` format. This date is
 entered manually at the start of each work day.
 
 Cell `J5` contains the live daily calculation:
