@@ -119,7 +119,9 @@ added throughout the day and when finalized totals must be preserved for
 later reference or timesheet submission.
 
 This workflow introduces a dedicated Total (day) column, which is
-calculated first and then used as the source for weekly totals.
+calculated first and then used as the source for weekly totals. 
+
+
 
 ## Add a Checkbox Column
 
@@ -193,6 +195,9 @@ formula.
 Once the weekly total is verified, paste the value using Paste special
 \> Values only and protect the cell. This ensures the weekly figure
 remains stable and can be reliably referenced later.
+
+Cell J11 is reserved for month-boundary handling. If a new month begins on a day other than Monday, the number of hours worked earlier in the week for the previous month is manually entered into J11. This value is then temporarily referenced by weekly calculations until the week is finalized. Once the week is complete and totals have been pasted as values, J11 may be cleared and reused when needed.
+
 
 ## Notes on Record Integrity
 

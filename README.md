@@ -86,6 +86,7 @@ formulas use open or adjustable ranges during active work periods.
 ```
 
 - Column: Total hours (month)  
+  
   Formula
 
 ```
@@ -119,7 +120,9 @@ added throughout the day and when finalized totals must be preserved for
 later reference or timesheet submission.
 
 This workflow introduces a dedicated Total (day) column, which is
-calculated first and then used as the source for weekly totals.
+calculated first and then used as the source for weekly totals. 
+
+
 
 ## Add a Checkbox Column
 
