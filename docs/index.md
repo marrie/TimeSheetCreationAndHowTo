@@ -195,8 +195,7 @@ Once the weekly total is verified, paste the value using Paste special
 \> Values only and protect the cell. This ensures the weekly figure
 remains stable and can be reliably referenced later.
 
-Cell J11 is used as a helper value when a work week crosses a month boundary. This is useful when a new month begins on a day other than Monday and hours from the earlier part of the work week need to be included temporarily. In that case, J11 stores the carried-over hours until the week is finalized. A weekly total may then reference both J9 and J11, depending on the month setup.
-
+Cell J11 is reserved for month-boundary handling. If a new month begins on a day other than Monday, the number of hours worked earlier in the week for the previous month is manually entered into J11. This value is then temporarily referenced by weekly calculations until the week is finalized. Once the week is complete and totals have been pasted as values, J11 may be cleared and reused when needed.
 
 ## Notes on Record Integrity
 
