@@ -30,23 +30,14 @@ first row, ensure row 1 is highlighted
 In row 1, label the columns as follows:
 
 - Date
-
 - Task
-
 - Time
-
 - Total (day)
-
 - Total (week)
-
 - Total (month)
-
 - Hours remaining (month)
-
 - Hours remaining (week)
-
 - Total (checkboxes)
-
 - Control block
 
 Name the sheet. For example, “November 2025.”
@@ -71,40 +62,39 @@ weekly totals that should not shift when new task rows are added. Other
 formulas use open or adjustable ranges during active work periods.
 
 - Column: total (day)  
-  Formula:
+  - Formula:
 
-
-```
-=j5
-```
+   ```
+   =j5
+   ```
 
 - Column: Total hours (week)  
-  Formula
+  * Formula
 
-```
-=j9
-```
+    ```
+    =j9
+    ```
 
 - Column: Total hours (month)  
-  Formula
+  * Formula
 
-```
-=SUM(D2:D)
-```
+    ```
+    =SUM(D2:D)
+    ```
 
 - Column: Remaining hours (month):  
-  Formula:
+  * Formula:
 
-```
-=80-F2
-```
+    ```
+    =80-F2
+    ```
 
 - Column: Remaining hours (week):  
-  Formula:
+  * Formula:
 
-```
-=20-j9
-```
+    ```
+    =20-j9
+    ```
 
 Each of these cells may be referenced throughout the month. For the
 Remaining hours (week) column, the value in cell J9 is updated at the
@@ -148,11 +138,8 @@ Cell J5 contains the live daily calculation:
 In this formula:
 
 - Column C contains time values.
-
 - Column I contains checkboxes.
-
 - Column A contains the manually entered date.
-
 - Only rows where the checkbox is TRUE and the date matches J3 are
   included.
 
@@ -165,11 +152,8 @@ When all tasks for the day are complete and the live total in J5 is
 verified:
 
 - In the Total (day) cell for that date, enter =J5.
-
 - Press Enter.
-
 - Copy that cell.
-
 - Use Paste special → Values only.
 
 The formula in J5 remains intact and is reused the next day by changing
@@ -187,9 +171,7 @@ formula.
 ```
 
 - Column D equals Total (day).
-
 - Column A equals Date
-
 - Cell J7 stores the week’s start date.
 
 Once the weekly total is verified, paste the value using Paste special
@@ -211,19 +193,13 @@ changed.
 
 To create validation rules:
 
-Add a new tab in the sheet ( For example “Validation Rules).”
-
-Create a column called Hours. This is in column A
-
-Enter values in A2–A5 (with A1 as the header). Adjust your range
+* Add a new tab in the sheet ( For example “Validation Rules).”
+* Create a column called Hours. This is in column A
+* Enter values in A2–A5 (with A1 as the header). Adjust your range
 accordingly, for example A2:A40:
-
    - 0.25
-   
    - 0.5
-   
    - 0.75
-   
    - 1.0
 
 ## Define the Range
@@ -240,15 +216,11 @@ example, C2:C200).
 ## Apply Data Validation
 
 - Open Data (alt plus shift plus D \> Data validation. Add a rule
-
 - Under Criteria, choose Dropdown from a range
-
 - In the first box enter your range from your main sheet (for example,
   november2025). This range is where the validation combo box lives. For
   example, C2:C200.
-
 - Next, tab to the range button and press it.
-
 - Switch to the sheet with your validation rule data set using control
   shift page up, or control shift page down. This will be the set of
   hours we entered earlier. Enter the range from your “Rules” sheet (for
