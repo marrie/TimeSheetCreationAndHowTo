@@ -101,6 +101,8 @@ Remaining hours (week) column, the value in cell J9 is updated at the
 start of each new week to reference the first finalized daily total for
 that week.
 
+Note: When entering dates in column A, use date-formatted cells rather than plain text. Text-formatted dates can break date-based calculations. Either a standard date format, such as mm/dd/yyyy, or a custom date format configured through Format → Number → Custom date and time may be used. As long as the cells contain actual date values, date-related formulas will calculate correctly regardless of how dates are displayed.
+
 # Calculating Daily Total
 
 This timesheet supports a checkbox-driven workflow that calculates daily
