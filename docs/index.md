@@ -250,10 +250,7 @@ until the option is no longer available.
 Supporting sheets, such as the validation rules sheet, remain in their
 original position. 
 
-Note: A personal script (not included in this
-documentation) as well as a custom menu and option have been created to
-move the selected month’s tab all the way to the beginning of the
-workbook.
+Note: I use a small personal Google Apps Script (not included as part of the standard workflow) to move the selected month's tab to the beginning of the workbook. An implementation example is provided in the end notes for those who wish to use it.[^1]
 
 Note: If using bookmarks in Google Chrome or another web browser, update
 the bookmark when creating a new month’s sheet. Opening an outdated
@@ -285,3 +282,32 @@ finalized.
 
 This approach favors clarity and repeatability over automation. It
 allows changes while work is active and preserves finalized results.
+
+
+# End Notes
+
+[^1]: If the end user  wants to implement the script, go to Extensions > App Script and start a new script. Implement the following script shown below. It will also add an additional menu option found to the right of the ”Help” menu called “Accessibility Tools.”
+```
+ // Adds a custom menu to the  attached  Google Sheet when the file opens.
+// This  menu lets me run my sheet tab utility without opening Apps Script.
+
+function onOpen() {
+  const ui = SpreadsheetApp.getUi();
+
+  ui.createMenu('Sheet Tools')
+    .addItem('Move selected tab all the way left', 'moveActiveSheetToFarLeft')
+    .addToUi();
+}
+
+// Moves the currently selected sheet tab to the far left.
+// In Google Sheets, position 1 means the first tab on the left.
+// This only changes the order of sheet tabs.
+// This script  does not change cell data, formulas, formatting, or permissions.
+
+function moveActiveSheetToFarLeft() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  spreadsheet.moveActiveSheet(1);
+}
+
+```
+
